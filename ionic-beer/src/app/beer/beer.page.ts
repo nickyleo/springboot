@@ -12,12 +12,12 @@ interface Todo{
   styleUrls: ['./beer.page.scss'],
 })
 export class BeerPage implements OnInit {
- beers: Todo[];
+ beer: Todo[];
   constructor(public beerService: BeerService) { }
 
   ngOnInit() {
 
-    this.beerService.getGoodBeers().subscribe((response)=>{this.beers=response;})
+    this.beerService.getGoodBeers().subscribe((response)=>{this.beer=response;})
 
   }
 

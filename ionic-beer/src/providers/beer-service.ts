@@ -14,6 +14,6 @@ export class BeerService {
   }
 
   getGoodBeers(): Observable<any> {
-    return this.http.get(this.API + '/good-beers').pipe(map((res: any)=>res.json()));
+    return this.http.get(this.API + '/good-beers').pipe(map((res: Response)=> res.json()as any));
   }
 }

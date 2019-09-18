@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { BeerService } from '../../providers/beer-service';
 import { BeerPage } from './beer.page';
-
+import { GiphyService } from '../../providers/giphy-service';
 const routes: Routes = [
   {
     path: '',
@@ -22,7 +22,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   providers: [
-    BeerService
+    BeerService,
+    GiphyService
   ],
   declarations: [BeerPage]
 })

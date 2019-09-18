@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BeerService } from '../../providers/beer-service';
+
 
 @Component({
   selector: 'app-beer',
@@ -6,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./beer.page.scss'],
 })
 export class BeerPage implements OnInit {
-
-  constructor() { }
+private beers: Array<any>;
+  constructor(public beerService: BeerService) { }
 
   ngOnInit() {
   }

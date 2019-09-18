@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-
+import { BeerService } from '../../providers/beer-service';
 import { BeerPage } from './beer.page';
 
 const routes: Routes = [
@@ -20,6 +20,9 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    BeerService
   ],
   declarations: [BeerPage]
 })
